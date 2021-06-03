@@ -6,7 +6,7 @@ pipeline {
                 //snDevOpsStep()
                 echo "Building"
                 sh 'mvn -X clean install -DskipTests
-                git branch: 'master', credentialsId: 'e99c18ec-1db5-4a2a-a7a7-69b730fcbf14', url: 'https://github.com/kseballos/CodeGram.git'
+                //git branch: 'master', credentialsId: 'e99c18ec-1db5-4a2a-a7a7-69b730fcbf14', url: 'https://github.com/kseballos/CodeGram.git'
                        
             }          
         }
