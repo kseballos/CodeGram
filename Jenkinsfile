@@ -26,7 +26,7 @@ pipeline {
         stage('Publish to PROD') {
             steps {
                 snDevOpsStep()
-                snDevOpsChange(ignoreErrors:{true/false},changeRequestDetails:{setCloseCode:{true/false}})
+                snDevOpsChange()
                 }
         }
     }
