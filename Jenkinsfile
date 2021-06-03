@@ -1,1 +1,28 @@
-#test again trigger to pipeline test
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                snDevOpsStep()
+                git branch: 'master', credentialsId: 'e99c18ec-1db5-4a2a-a7a7-69b730fcbf14', url: 'https://github.com/kseballos/CodeGram.git'
+                       
+            }          
+        }
+        stage('Publish to UAT') {
+            steps {
+                snDevOpsStep()    
+               }
+        }
+        stage('Jenkins Deploy UAT') {
+            steps {
+                snDevOpsStep()
+            }
+        }
+        stage('Publish to PROD') {
+            steps {
+                snDevOpsStep()
+                snDevOpsChange(ignoreErrors:{true/false},changeRequestDetails:{setCloseCode:{true/false}})
+                }
+        }
+    }
+}
