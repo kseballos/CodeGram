@@ -36,5 +36,7 @@ pipeline {
                                "description": "created a story"
                               }
                           }""")
+            }
+        }
     }
 }
