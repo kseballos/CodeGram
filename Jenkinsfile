@@ -30,8 +30,8 @@ pipeline {
                 {
                      "setCloseCode": false,
                      "attributes": {
-                               "start_date": "2021-06-30 08:00:00"
-                               "end_date": "2021-07-02 08:00:00"
+                               "start_date": "2021-06-30 08:00:00",
+                               "end_date": "2021-07-02 08:00:00",
                                "short_description": "Sample description for change",
                                "description": "created a story"
                               }
