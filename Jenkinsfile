@@ -35,8 +35,6 @@ pipeline {
                                "short_description": "Sample description for change",
                                "description": "created a story"
                               }
-                          }
-                      )
-
+                          }""")
     }
 }
