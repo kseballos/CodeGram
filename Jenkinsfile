@@ -26,8 +26,17 @@ pipeline {
         stage('Publish to PROD') {
             steps {
                 //snDevOpsStep()
-                snDevOpsChange()
-                }
-        }
+                snDevOpsChange(changeRequestDetails: """
+                {
+                     "setCloseCode": false,
+                     "attributes": {
+                               "start_date": "2021-06-30 08:00:00"
+                               "end_date": "2021-07-02 08:00:00"
+                               "short_description": "Sample description for change",
+                               "description": "created a story"
+                              }
+                          }
+                      )
+
     }
 }
