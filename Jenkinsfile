@@ -27,7 +27,7 @@ pipeline {
         stage('Publish to PROD') {
             steps {
                 //snDevOpsStep()
-                //snDevOpsChange()
+                snDevOpsChange()
             }
         }
     }
